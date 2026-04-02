@@ -1,4 +1,6 @@
-# ![Boundary Logo](./boundary.png)
+<p align="center">
+  <img src="./boundary.png" alt="Boundary Logo" width="160" height="160" />
+</p>
 
 [中文](#zh) | [English](#en)
 
