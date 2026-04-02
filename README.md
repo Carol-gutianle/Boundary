@@ -69,7 +69,7 @@
 1. Open `chrome://extensions/`
 2. Enable “Developer mode”
 3. Click “Load unpacked”
-4. Select this folder: `/Users/gutianle/Desktop/Boundary/Boundary`
+4. Select this folder: `Boundary/Boundary`
 5. Open the popup or options page to configure
 6. Refresh the target site after changes
 
