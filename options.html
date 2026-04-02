@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boundary</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Boundary</h1>
+          <p>选择要屏蔽搜索推荐的站点</p>
+        </div>
+        <div class="badge">Search Suggest Blocker</div>
+      </header>
+
+      <section class="status" id="status">
+        <div>
+          <div class="status-title">插件状态</div>
+          <div class="status-value" id="statusText">加载中...</div>
+          <div class="status-note">修改后刷新目标网站页面生效</div>
+        </div>
+        <div class="status-actions">
+          <button id="enableAll" class="primary">全部开启</button>
+          <button id="disableAll" class="ghost">全部关闭</button>
+        </div>
+      </section>
+
+      <section class="grid" id="platforms"></section>
+
+      <footer class="footer">
+        <div class="hint">只在开启的平台上生效。支持平台会逐步扩展。</div>
+        <button id="reset" class="ghost">恢复默认</button>
+      </footer>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

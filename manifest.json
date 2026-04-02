@@ -1,0 +1,39 @@
+{
+  "name": "Boundary",
+  "description": "按平台屏蔽搜索框推荐/联想下拉",
+  "version": "1.1.1",
+  "manifest_version": 3,
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Boundary",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bilibili.com/*",
+        "https://www.youtube.com/*",
+        "https://www.weibo.com/*",
+        "https://s.weibo.com/*",
+        "https://www.zhihu.com/*",
+        "https://scholar.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
