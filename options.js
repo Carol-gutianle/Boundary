@@ -1,12 +1,12 @@
 const DEFAULT_SETTINGS = {
   platforms: {
-    bilibili: { enabled: true, hideInput: true, hideSuggest: true, hideAutocomplete: false },
+    bilibili: { enabled: true, hideInput: true, hideSuggest: true, hideAutocomplete: true },
     youtube: { enabled: false, hideInput: false, hideSuggest: false, hideAutocomplete: false },
     weibo: { enabled: false, hideInput: false, hideSuggest: false, hideAutocomplete: false },
     zhihu: { enabled: false, hideInput: false, hideSuggest: false, hideAutocomplete: false },
-    google_scholar: { enabled: false, hideInput: true, hideSuggest: true, hideAutocomplete: false }
+    google_scholar: { enabled: true, hideInput: true, hideSuggest: true, hideAutocomplete: true }
   },
-  version: 2
+  version: 3
 };
 
 const PLATFORMS = [
@@ -217,7 +217,13 @@ function init() {
       const nextPlatforms = { ...settings.platforms };
       availableIds.forEach((id) => {
         const cfg = normalizePlatformConfig(nextPlatforms[id]);
-        nextPlatforms[id] = { ...cfg, enabled: true, hideInput: false, hideSuggest: false };
+        nextPlatforms[id] = {
+          ...cfg,
+          enabled: true,
+          hideInput: false,
+          hideSuggest: false,
+          hideAutocomplete: false
+        };
       });
       const next = { ...settings, platforms: nextPlatforms };
       chrome.storage.sync.set(next, () => {

@@ -1,13 +1,13 @@
 (() => {
   const DEFAULT_SETTINGS = {
     platforms: {
-      bilibili: { enabled: true, hideInput: true, hideSuggest: true, hideAutocomplete: false },
+      bilibili: { enabled: true, hideInput: true, hideSuggest: true, hideAutocomplete: true },
       youtube: { enabled: false, hideInput: false, hideSuggest: false, hideAutocomplete: false },
       weibo: { enabled: false, hideInput: false, hideSuggest: false, hideAutocomplete: false },
       zhihu: { enabled: false, hideInput: false, hideSuggest: false, hideAutocomplete: false },
-      google_scholar: { enabled: false, hideInput: true, hideSuggest: true, hideAutocomplete: false }
+      google_scholar: { enabled: true, hideInput: true, hideSuggest: true, hideAutocomplete: true }
     },
-    version: 2
+    version: 3
   };
 
   const PLATFORM_RULES = {
